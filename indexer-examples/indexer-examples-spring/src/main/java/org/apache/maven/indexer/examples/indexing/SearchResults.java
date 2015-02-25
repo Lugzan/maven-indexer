@@ -37,7 +37,7 @@ public class SearchResults
      * K: repositoryId
      * V: artifactInfos
      */
-    private Map<String, Collection<ArtifactInfo>> results = new LinkedHashMap<>();
+    private Map<String, Collection<ArtifactInfo>> results = new LinkedHashMap<String, Collection<ArtifactInfo>>();
 
 
     public SearchResults()

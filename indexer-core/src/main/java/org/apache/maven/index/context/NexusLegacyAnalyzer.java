@@ -40,7 +40,7 @@ import org.apache.maven.index.ArtifactInfo;
 public final class NexusLegacyAnalyzer
     extends Analyzer
 {
-    private static final Analyzer DEFAULT_ANALYZER = new StandardAnalyzer( Version.LUCENE_46 );
+    private static final Analyzer DEFAULT_ANALYZER = new StandardAnalyzer( Version.LUCENE_43 );
     
     @Override
     protected TokenStreamComponents createComponents(String fieldName, Reader reader)
@@ -60,7 +60,7 @@ public final class NexusLegacyAnalyzer
     {
         if ( !isTextField( field ) )
         {
-            return new CharTokenizer(Version.LUCENE_46, reader )
+            return new CharTokenizer(Version.LUCENE_43, reader )
             {
                 @Override
                 protected boolean isTokenChar(int c )

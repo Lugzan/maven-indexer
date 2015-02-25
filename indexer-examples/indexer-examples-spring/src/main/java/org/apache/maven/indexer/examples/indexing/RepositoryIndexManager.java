@@ -45,7 +45,7 @@ public class RepositoryIndexManager
      * K: repositoryId
      * V: index
      */
-    private Map<String, RepositoryIndexer> indexes = new LinkedHashMap<>();
+    private Map<String, RepositoryIndexer> indexes = new LinkedHashMap<String, RepositoryIndexer>();
 
 
     public RepositoryIndexManager()

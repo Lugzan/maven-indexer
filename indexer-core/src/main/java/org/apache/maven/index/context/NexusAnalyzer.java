@@ -40,7 +40,7 @@ public final class NexusAnalyzer
 
     public NexusAnalyzer()
     {
-        super(PER_FIELD_REUSE_STRATEGY);
+        super(new PerFieldReuseStrategy());
     }
     
     protected Tokenizer getTokenizer( String fieldName, Reader reader )
@@ -69,7 +69,7 @@ public final class NexusAnalyzer
     {
         public NoopTokenizer( Reader in )
         {
-            super( Version.LUCENE_46, in );
+            super( Version.LUCENE_43, in );
         }
 
         @Override
@@ -85,7 +85,7 @@ public final class NexusAnalyzer
     {
         public DeprecatedClassnamesTokenizer( Reader in )
         {
-            super( Version.LUCENE_46, in );
+            super( Version.LUCENE_43, in );
         }
         
         @Override
@@ -106,7 +106,7 @@ public final class NexusAnalyzer
     {
         public LetterOrDigitTokenizer( Reader in )
         {
-            super( Version.LUCENE_46, in );
+            super( Version.LUCENE_43, in );
         }
 
         @Override

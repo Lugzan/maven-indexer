@@ -60,7 +60,7 @@ public class IndexerConfiguration
 
     public List<IndexCreator> getIndexersAsList()
     {
-        List<IndexCreator> indexersAsList = new ArrayList<>();
+        List<IndexCreator> indexersAsList = new ArrayList<IndexCreator>();
         for ( Map.Entry entry : indexers.entrySet() )
         {
             indexersAsList.add( ( IndexCreator ) entry.getValue() );

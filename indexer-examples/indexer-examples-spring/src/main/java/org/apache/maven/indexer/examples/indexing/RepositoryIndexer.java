@@ -51,7 +51,7 @@ public class RepositoryIndexer
 
     private static final Logger logger = LoggerFactory.getLogger( RepositoryIndexer.class );
 
-    private static final Version luceneVersion = Version.LUCENE_48;
+    private static final Version luceneVersion = Version.LUCENE_43;
 
     private static final String[] luceneFields = new String[]{ "g", "a", "v", "p", "c" };
 

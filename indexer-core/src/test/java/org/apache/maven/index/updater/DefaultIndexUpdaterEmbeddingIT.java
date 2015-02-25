@@ -60,10 +60,15 @@ public class DefaultIndexUpdaterEmbeddingIT
         throws Exception
     {
         int port;
-        try ( final ServerSocket ss = new ServerSocket( 0 ) )
+        ServerSocket ss = null;
+
+        try
         {
+            ss = new ServerSocket( 0 );
             ss.setReuseAddress( true );
             port = ss.getLocalPort();
+        } finally {
+          if (ss != null) ss.close();
         }
 
         baseUrl = "http://127.0.0.1:" + port + "/";

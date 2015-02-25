@@ -114,7 +114,7 @@ public class ArtifactIndexingServiceImpl
         }
         else
         {
-            Map<String, Collection<ArtifactInfo>> resultsMap = new LinkedHashMap<>();
+            Map<String, Collection<ArtifactInfo>> resultsMap = new LinkedHashMap<String, Collection<ArtifactInfo>>();
             for ( String repoId : repositoryIndexManager.getIndexes().keySet() )
             {
                 logger.debug( "Repository: {}", repoId );
@@ -151,7 +151,7 @@ public class ArtifactIndexingServiceImpl
                                                                 String query )
             throws IOException, ParseException
     {
-        Map<String, Collection<ArtifactInfo>> resultsMap = new LinkedHashMap<>();
+        Map<String, Collection<ArtifactInfo>> resultsMap = new LinkedHashMap<String, Collection<ArtifactInfo>>();
         final Set<ArtifactInfo> artifactInfoResults = repositoryIndexManager.getRepositoryIndex( repositoryId )
                                                                             .search( query );
 
